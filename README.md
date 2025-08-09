@@ -49,7 +49,7 @@ server.exe 0.0.0.0 2222
 ```
 
 ### Start the client
-Run the client on the host that actually runs the service you want to expose:
+Run the client on a host that runs the service you want to expose (or has network connectivity to it):
 
 ```bat
 client.exe <server_host> <server_port>
@@ -70,7 +70,7 @@ list
 exit
 ```
 
-- `add 8080 127.0.0.1 80` — tell the server to listen on port `8080` and forward to `127.0.0.1:80` on the client machine.
+- `add 8080 10.0.0.1 80` — tell the server to listen on port `8080` and forward to `10.0.0.1:80` on the client side.
 - `remove 8080` — stop that mapping.
 - `list` — show current mappings in the client.
 - `exit` — close control connection and quit.
